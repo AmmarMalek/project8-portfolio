@@ -11,11 +11,13 @@ menu.onclick = () => {
 let themeToggler = document.querySelector('#theme-toggler');
 
 themeToggler.onclick = () => {
-    themeToggler.classList.toggle('fa-sun');
-    if(themeToggler.classList.contains('fa-sun')){
+    if(themeToggler.classList.contains('fa-moon')){
+        themeToggler.classList.replace("fa-moon", "fa-sun")
         document.body.classList.add('active');
     }
     else{
-        document.body.classList.remove('active');
+        document.body.classList.remove('active');        
+        themeToggler.classList.replace( "fa-sun","fa-moon")
+
     }
 }
